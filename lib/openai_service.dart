@@ -3,9 +3,9 @@ import 'package:http/http.dart' as http;
 
 class OpenAIService {
   // Replace with your OpenRouter key (do NOT commit this to public repos)
-  static const apiKey = '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';
-  static const apiUri = 'https://openrouter.ai/api/v1/chat/completions';
-  static const model = 'deepseek/deepseek-chat';
+  static const apiKey = 'YOUR API KEY';
+  static const apiUri = 'YOUR END POINT LINK ';
+  static const model = 'YOUR AI MODEL';
 
   // Strict system prompt: Krishna-conscious persona, polite, short, friendly.
   final String systemPrompt = '''
@@ -57,4 +57,5 @@ Do not invent sources or long encyclopedic replies.Also use actual sanskrit vers
 
   // Keep compatibility with existing code that calls getResponse(...)
   Future<String> getResponse(String prompt) => sendMessage(prompt);
+
 }
